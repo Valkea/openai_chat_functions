@@ -77,7 +77,6 @@ class ToolBot():
             message = {"role": "user", "content": query}
             self.history.append(message)
 
-        print(f"messages INIT: {self.history}")
         response = self.client.chat.completions.create(
             model=self.model,
             messages=self.history,
@@ -94,12 +93,7 @@ class ToolBot():
         tool_calls = response_message.tool_calls
         if tool_calls:
 
-            # message = {
-            #     "role": "assistant",
-            #     "content": response_message,
-            #     }
             self.history.append(response_message)
-            print(f"messages02: {self.history}")
 
             # Step 4: send the info for each function call and function response to the model
             for tool_call in tool_calls:
@@ -130,7 +124,6 @@ class ToolBot():
                         "name": function_name,
                         }
                 self.history.append(message)
-                print(f"messages03: {self.history}")
 
                 if re_query:
                     return self.send_query(None)
@@ -143,7 +136,6 @@ class ToolBot():
                 "content": response_message.content,
                 }
             self.history.append(message)
-            print(f"messages05: {self.history}")
             return response_message.content
 
 
