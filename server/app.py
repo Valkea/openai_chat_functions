@@ -36,16 +36,12 @@ def index():
 
 @app.route("/inference", methods=['POST'])
 def inference():
-    """Infer using the LLM model"""
+    """Infer using the ToolBot"""
 
     query = request.form.get("query")
-    # result = run_conversation(client, query)
-    # print(result)
-    # response = result.choices[0].message.content
-    # response = f"Blop blop >>{query}<<"
     response = tool_bot.send_query(query)
     return jsonify(response)
- 
+
 # ########## START FLASK SERVER ##########
 
 if __name__ == "__main__":
