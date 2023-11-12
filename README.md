@@ -1,12 +1,17 @@
 # OpenAI Chatbot with function calls
 
-![alt text](medias/demo_chat.png)
+## Example
 
-![alt text](medias/demo_email.png)
+Here is an example of dialogue with the ToolBot
 
-I've included for you in the section below, all the instructions required to run the project on your computer.
+> ![alt text](medias/demo_chat.png)
+
+And here is a copy of the received email
+
+> ![alt text](medias/demo_email.png)
 
 ## 1. Run the API locally from sources
+In this section, you will find all the instructions required to run the project on your computer.
 
 ### First, 
 let's duplicate the project github repository
