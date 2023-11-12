@@ -1,5 +1,9 @@
 # OpenAI Chatbot with function calls
 
+![alt text](medias/demo_chat.png)
+
+![alt text](medias/demo_email.png)
+
 I've included for you in the section below, all the instructions required to run the project on your computer.
 
 ## 1. Run the API locally from sources
